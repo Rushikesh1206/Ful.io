@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class isValid {
+    public static void main(String[] args) {
+
+        System.out.println("Type the mobile number : ");
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        if(s.matches("\\d{10}"))
+            System.out.println("Valid Number");
+        else if(s.matches("\\d{3}[-\\.\\s]\\d{3}[-\\.\\s]\\d{4}"))
+            System.out.println("Valid Number");
+        else if(s.matches("[(\\d]\\d{3}[)\\d]\\d{3}[-\\.\\s]\\d{4}"))
+            System.out.println("Valid Number");
+        else if(s.matches("[(\\d]\\d{3}[)\\d][-\\d]\\d{3}[-\\.\\s]\\d{4}"))
+            System.out.println("Valid Number");
+        else if(s.matches("[+\\d]\\d{11}"))
+            System.out.println("Valid Number");
+        else if(s.matches("[+\\d]\\d{1}[-\\.\\s]\\d{3}[-\\.\\s]\\d{3}[-\\.\\s]\\d{4}"))
+            System.out.println("Valid Number");
+        else if(s.matches("[+\\d]\\d{3}[-\\.\\s]\\d{3}[-\\.\\s]\\d{4}"))
+            System.out.println("Valid Number");
+        else if(s.matches("\\d{1}[-\\.\\s]\\d{3}[-\\.\\s]\\d{3}[-\\.\\s]\\d{4}"))
+            System.out.println("Valid Number");
+        else
+            System.out.println("InValid Number");
+    }
+}
